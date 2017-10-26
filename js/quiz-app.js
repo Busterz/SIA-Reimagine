@@ -1,5 +1,3 @@
-alert("Running app 1");//Debugging
-
 //Initialize a new set of data
 var questions = [
     new Question("Question 1", ["A", "B", "C", "D"], "A"),
@@ -15,6 +13,15 @@ function showScores()
 {
     var gameOverHtml = "<h1>Result</h1>";
     gameOverHtml += "<h2 id='score'>Your scores: " + quiz.score + "</h2>";
+    if(quiz.score > 2)
+        {
+            gameOverHtml += "<p>Congratulations! You may proceed to the next stage of the recruitment.</p>";
+            gameOverHtml += "<a href='second-round.html' class='blue-orange-button'>Proceed</a>";
+        }
+    else
+        {
+            gameOverHtml += "<p>We are regretful not to have you in for this batch. Nonetheless, you could still try to re-apply in the next batch";
+        }
     var element = document.getElementById("quiz-box");
     element.innerHTML = gameOverHtml;
 }
@@ -24,7 +31,6 @@ function guessAns(id, guess)
     var button = document.getElementById(id);
     button.onclick = function()
     {
-        alert("button clicked");//Debugging
         quiz.guess(guess);
         startApp();
     }
@@ -41,7 +47,6 @@ function startApp()
 {
     if(quiz.isEnded())
         {
-            alert('here!');//Debugging
             showScores();
         }
     else
@@ -60,7 +65,6 @@ function startApp()
                 }
             showProgress();//Update the current Question Number
         }
-    alert("Running app 2");//Debugging
 }
 
 startApp();

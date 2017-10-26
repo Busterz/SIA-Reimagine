@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>Hire Me!</title>
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/second-round.js"></script>
+        <script>
+        function show(shown, hidden) {
+          document.getElementById(shown).style.display='block';
+          document.getElementById(hidden).style.display='none';
+          return false;
+        }
+        </script>
+        <script type= "text/javascript" src= "https://api.clipchamp.com/6EhCk5T3meycn3ayUSN0HZ-NNuw/button.js"></script>
+    </head>
+    
+    <body>
+        <header class="main-header">
+            <div class="main-header__content">
+                <a class="main-header__logo" href="index.html"></a>
+                <nav class="top-nav">
+                    <p>Welcome to Our Applicant Portal</p>
+                    <a href="login.html" class="top-nav__login" >Log Out</a>
+                </nav>
+            </div>
+        </header>
+        
+        <div class="userhome-container">
+            <div id="video-intro">
+                <div>
+                    <h2>Video Submission</h2>
+                    <p>In the following step, you will need to upload a recording of yourself answering to the questions we direct at you.</p>
+
+                </div>
+                <a href="#" class="blue-orange-button" onclick="return show('video-page','video-intro');">Let's Begin!</a>
+            </div>
+
+            <div id="video-page" style="display:none">
+                <div id="video-container">
+                    <button class="blue-orange-button" id="clipchamp-button">Record</button>
+                </div>
+                <br><br>
+                <a href="#" class="blue-orange-button" onclick="return show('video-intro','video-page');">Return</a>
+            </div>
+        </div>
+    </body>
+</html>
