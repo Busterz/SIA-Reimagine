@@ -1,9 +1,43 @@
 //Initialize a new set of data
 var questions = [
-    new Question("Question 1", ["A", "B", "C", "D"], "A"),
-    new Question("Question 2", ["A", "B", "C", "D"], "A"),
-    new Question("Question 3", ["A", "B", "C", "D"], "A"),
-    new Question("Question 4", ["A", "B", "C", "D"], "A")
+    new Question(
+        "You see one of the passengers and a fellow cabin crew member engaged in an unpleasant conversation that has heated up.<br>How would you resolve this matter?", 
+            ["Interfere while being polite, try to resolve the situation and apologise, if necessary.",
+             "Let them resolve the matter as another person's involvement will be unnecessary.", 
+             "Hear both parties, decide who is wrong and ask them to apologise to each other",
+             "Interfere and get all the cabin crew members onto this matter"], 
+        "Interfere while being polite, try to resolve the situation and apologise, if necessary."),
+    
+    new Question(
+        "Which of the following best describes some of the roles and responsibilities of a cabin crew member?",
+            ["Carrying out pre-flight duties, Welcoming passengers on board, briefing on aircraft safety procedures, Serving meals and refreshments, announcements (if any)",
+             "Carrying out pre-flight duties, welcome passengers on board, stocking hand luggage safely", 
+             "Carrying out pre-flight duties, welcome passengers on board, serving meals and refreshments", 
+             "None of the above"],
+        "Carrying out pre-flight duties, Welcoming passengers on board, briefing on aircraft safety procedures, Serving meals and refreshments, announcements (if any)"),
+    
+    new Question(
+        "What are the characteristics of a pleasant Customer service?", 
+            ["Always smile, look into their query and quickly answer them and move on to the next customer", 
+             "Provide them with to the point answers. Extra care is not required", 
+             "Always smile, respond to their query politely and patiently, no matter what the circumstances are", "Guide them to the right party who can solve their issue ASAP"],
+        "Always smile, respond to their query politely and patiently, no matter what the circumstances are"),
+    
+    new Question(
+        "Imagine you are working with someone you don’t like; how do you handle any uncomfortable situations?",
+        ["Take matters to the upper management to relocate yourself to another branch",
+         "Stay professional and be diplomatic",
+         "Try to adjust to the person’s personality", 
+         "Show the person who the right one is"],
+        "Stay professional and be diplomatic"),
+    
+    new Question(
+        "How do you feel about working with people from different cultures and backgrounds?", 
+        ["It is just an added advantage",
+         "It is good to learn about new cultures and understand the various backgrounds but it is not a necessity", 
+         "Excited! An opportunity to learn from various cultures and improve my knowledge of the world", 
+         "None of the above"],
+        "Excited! An opportunity to learn from various cultures and improve my knowledge of the world")
 ];
 
 //Intialize a new quiz
@@ -13,7 +47,7 @@ function showScores()
 {
     var gameOverHtml = "<h1>Result</h1>";
     gameOverHtml += "<h2 id='score'>Your scores: " + quiz.score + "</h2>";
-    if(quiz.score > 2)
+    if(quiz.score > 3)
         {
             gameOverHtml += "<p>Congratulations! You may proceed to the next stage of the recruitment.</p>";
             gameOverHtml += "<a href='second-round.html' class='blue-orange-button'>Proceed</a>";
