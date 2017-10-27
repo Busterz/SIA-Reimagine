@@ -13,6 +13,7 @@ a{
 
 .body{
 
+    background: url("../images/login-bg.jpg") no-repeat center center fixed;
     width: auto;
     height: auto;
     background-size: cover;
@@ -33,7 +34,7 @@ a{
     float: left;
     font-size: 50px;
     font-weight: 200;
-    color: #000;
+    color: #fff;
 
 }
 
@@ -47,7 +48,7 @@ a{
 
     position: absolute;
     top: calc(50% - 50px);
-    left: 53%;
+    left: 50%;
     height: auto;
     width: auto;
     padding: 10px;
@@ -59,6 +60,8 @@ a{
 .login label{
     
     color: #fff;
+    margin-top: 5px;
+    
 }
 
 #username{
@@ -113,7 +116,7 @@ a{
 
 .button:active{
 
-    opacity: 0.6;
+    opacity: 0.8;
 
 }
 
@@ -442,7 +445,7 @@ a{
 
 .quiz-box #question{
 
-    font-size: 40px;
+    font-size: 45px;
     color: #5a6772;
 
 }
@@ -457,7 +460,7 @@ a{
 
     background-color: #778897;
     width: 300px;
-    font-size: 30px;
+    font-size: 20px;
     color: #fff;
     border: 1px solid #1d3c6a;
     border-radius: 50px;

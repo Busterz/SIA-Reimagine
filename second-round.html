@@ -61,15 +61,24 @@
                           inputs: ['camera'],
                           enable: ['no-user-retry', 'no-thank-you', 'no-branding'],
                           camera: {
-                            limit: 120,
+                            limit: 600,
                             teleprompter: {
                               subtitles: {
                                 0: {
-                                  text: 'What are your strengths?'
+                                  text: 'Tell me about yourself'
                                 },
-                                60: {
-                                  text: 'What are your weaknesses?'
-                                }
+                                120: {
+                                  text: 'How do you handle stress and pressure?'
+                                },
+                                  240:{
+                                      text: 'What are your goals for the future?'
+                                  },
+                                  360:{
+                                      text: 'Describe why you are the right fit for SIA and how SIA adds value to you?'
+                                  },
+                                  480:{
+                                      text: 'What qualities do you think a good cabin crew member should have?'
+                                  }
                               }
                             }
                           },
