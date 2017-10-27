@@ -214,6 +214,21 @@ a{
 
 }
 
+.userhome-container h1 span{
+    
+    color: #022569;
+    
+}
+
+.userhome-right-container .text-border{
+    
+    font-size: 18px;
+    padding: 20px 20px;
+    border: 1px solid #FEA000;
+    border-radius: 5px;
+    
+}
+
 .blue-orange-button{
 
     background-color: rgba(2, 37, 105, 1);
@@ -248,7 +263,7 @@ a{
 .text-container{
 
     margin: auto;
-
+    
 }
 
 .main-text{
@@ -306,7 +321,7 @@ a{
 
     width: 90%;
     position: absolute;
-    top: 150px;
+    top: 100px;
     margin: 0 5%;
 
 
@@ -465,4 +480,22 @@ a{
 
     outline: none;
 
+}
+
+#video-box{
+    
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 50px 50px 50px;
+    border-radius: 20px;
+    border: 1px solid #022569;
+    
+}
+
+#launch-clipchamp{
+    
+    margin: 0 40%;
+    
 }

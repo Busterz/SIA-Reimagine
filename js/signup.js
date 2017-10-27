@@ -23,7 +23,7 @@ function validateForm()
     var checkPass = document.getElementById("checkPassword").value;
     if(firstName != "" && lastName != "" && email != "" && inputPass != "" && checkPass != ""){
       confirmEnteredPassword();
-    }
+    } 
     else{
       alert("Please ensure that all your fields are filled.");
     }

@@ -7,6 +7,17 @@
         <!-- CSS Files -->
         <link rel="stylesheet" href="css/main.css" />
         <script src="js/signup.js"></script>
+        <script>
+        function displayBox(id, box)
+            {
+                var option = document.getElementById(box);
+                if(option.style.display == 'none'){
+                    option.style.display = 'block';
+                }else{
+                    option.style.display = 'none';
+                }
+            }
+        </script>
     </head>
     
     <body>
@@ -37,50 +48,48 @@
                 <div class="form">
                     <!-- Have the categories according to the application form-->
                     <fieldset>
-                        <legend>Full Name &amp; Nationality</legend>
-                        First Name: <br>
-                        <input type="text" name="firstname"><br>
-                        Last Name: <br>
-                        <input type="text" name="lastname"><br>
+                        <legend>Nationality &amp; NRIC Details</legend>
                         Nationality: <br>
                         <input type="text" name="nationality"><br>
                         NRIC Number: <br>
                         <input type="text" name="nric"><br>
                     </fieldset>
+                    <br>
 
                     <fieldset>
                         <legend>Address &amp; Contact Number</legend>
                         Residential Address: <br>
                         <input type="text" name="address"><br>
-                        Home Telephone: <br>
-                        <input type="number" name="home_phone"><br>
-                        Postal Address: <br>
+                        Postal Address: (If it's different from your residential address)<br>
                         <input type="text" name="address2"><br>
-                        Mobile Telephone: <br>
-                        <input type="number" name="mobile_phone"><br>
+                        Mobile Telephone: (eg: SG - 0065********)<br>
+                        <input type="number" name="phone"><br>
                         Email Address: <br>
                         <input type="email" name="email"><br>
-                        Office Tel: <br>
-                        <input type="number" name="office_num"><br>
                     </fieldset>
+                    <br>
 
                     <fieldset>
                         <legend>Height</legend>
-                        Height (in metres): <br>
+                        Height (In centimetres): <br>
                         <input type="number" name="height"><br>
                     </fieldset>
+                    <br>
 
                     <fieldset>
                         <!-- Has to be general, allow the user to add on up to 3 qualifications-->
                         <legend>Educational Qualifications</legend>
-                        Degree Qualifications: <br>
+                        Highest Educational Qualification: <br>
                         <input type="text" name="degree"><br>
-                        <!-- Checkbox to check whether the language they know is just spoken or written
-                            and make it a list-->
-                        Languages Spoken: <br>
-                        <input type="text" name="languages"><br>
+                        
+                        Languages Spoken: (Fill in the order of <b>Fluency</b>)<br>
+                        <input type="text" name="language1"><br><br>
+                        <input type="text" name="language2"><br><br>
+                        <input type="text" name="language3"><br>
                     </fieldset>
+                    <br>
 
+                    <!--
                     <fieldset>
                         <legend>Details of Present Employer (Where Applicable)</legend>
                         Name of Company: <br>
@@ -94,14 +103,15 @@
                         Allowances: <br>
                         <input type="number" name="company1_allowance"><br>
                     </fieldset>
+                    <br>
+                    -->
 
                     <fieldset>
                         <legend>Availability</legend>
+                        By when will you be available? (Answer in this format: dd/mm/yy) <br>
+                        <input type="text" name="availability"><br>
                     </fieldset>
-
-                    <fieldset>
-                        <legend>Details of National Service (Where Applicable)</legend>
-                    </fieldset>
+                    <br>
 
                     <fieldset>
                         <legend>Answer the Following Questions By Choosing</legend>
@@ -117,6 +127,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br> 2, Has any bankruptcy action ever been taken against you?<br>
                         <select id="q2" onchange="displayBox(this.id, 'box2')">
@@ -128,6 +139,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>3, Has any Court judgment or order ever been made against you ordering you to pay a debt to
                         someone?<br>
@@ -140,6 +152,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>4, Have you signed a promissory note or an acknowledgement of indebtedness for which the amount
                         pledged has not already been fully repaid?<br>
@@ -152,6 +165,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>5, Have you ever been employed in any capacity with SIA, its predecessors or its subsidiaries? <br>Give designation, period of employment and reason for leaving. <br>
                         <select id="q5" onchange="displayBox(this.id, 'box5')">
@@ -163,6 +177,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>6, Have you applied on any previous occasions for employment in any capacity with SIA? <br>
                         Give date and position applied for.<br>
@@ -175,6 +190,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>7, Do you have any relatives who are currently employed by SIA? <br>
                         If yes, please give designation, name and relationship. <br>
@@ -187,6 +203,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>8, Are you involved in any business undertakings? (e.g. Directorship, Partnership, etc.)<br>
                         <select id="q8" onchange="displayBox(this.id, 'box8')">
@@ -198,6 +215,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>9, Have you suffered from any mental or physical illness for which you have received medical
                         treatment? (e.g. diabetes, tuberculosis, epilepsy, asthma, etc.)<br>
@@ -210,6 +228,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>10, Are you confident to swim with a life jacket?<br>
                         <select id="q10" onchange="displayBox(this.id, 'box10')">
@@ -221,6 +240,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>11, Have you any tattoos on your face, neck, hands, lower arms and lower legs?<br>
                         <select id="q11" onchange="displayBox(this.id, 'box11')">
@@ -232,6 +252,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                         <br>12, Are you currently wearing any dental braces? If yes, please state expected date of removal. <br>(Please note that you will be required to remove your braces before training commences if your application is successful).<br>
                         <select id="q12" onchange="displayBox(this.id, 'box12')">
@@ -243,6 +264,7 @@
                             Details: <br>
                             <input type="text"/>
                         </div>
+                        <br>
 
                    </fieldset>
                     <br>
@@ -255,7 +277,7 @@
                         I accept that if any of the information given by me in this application for employment is in any way false, or incorrect, the Company shall have the right to reject my application, withdraw any offer of employment or dismiss me without notice and without assigning any reason.</p>
                     </div>
                 </div>
-                <input class="blue-orange-button" type="submit" value="Apply">
+                <a class="blue-orange-button" href="home.html">Apply</a>
             </form>          
             
             

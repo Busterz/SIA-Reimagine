@@ -9,5 +9,3 @@ Question.prototype.correctAnswer = function(choice)
 {
     return choice === this.answer;
 }
-
-alert("RUnning questions");

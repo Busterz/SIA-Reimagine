@@ -23,5 +23,3 @@ Quiz.prototype.guess = function(answer)
     }
     this.questionIndex++;
 }
-
-alert("running quiz");
