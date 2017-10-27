@@ -14,7 +14,10 @@
           return false;
         }
         </script>
-        <script type= "text/javascript" src= "https://api.clipchamp.com/6EhCk5T3meycn3ayUSN0HZ-NNuw/button.js"></script>
+        <script type= "text/javascript" src= "https://api.clipchamp.com/6EhCk5T3meycn3ayUSN0HZ-NNuw/button.js">
+        </script>
+
+
     </head>
     
     <body>
@@ -39,12 +42,68 @@
             </div>
 
             <div id="video-page" style="display:none">
-                <div id="video-container">
-                    <button class="blue-orange-button" id="clipchamp-button">Record</button>
+                <div id="video-box">
+                    <button class="blue-orange-button" id="launch-clipchamp">Record</button>
+                    <script type="text/javascript">
+                        var playerDiv = document.createElement('div');
+                        document.body.appendChild(playerDiv);
+
+                        var process = clipchamp({
+                          output: 'gdrive',
+                          gdrive: 'user',//File Naming Configure here
+                          style: {
+                            url: "https://api.test.clipchamp.com/static/button/themes/modern-light.css"
+                          },
+                          inputs: ['camera'],
+                          enable: ['no-user-retry', 'no-thank-you', 'no-branding'],
+                          camera: {
+                            limit: 120,
+                            teleprompter: {
+                              subtitles: {
+                                0: {
+                                  text: 'What are your strengths?'
+                                },        
+                                60: {
+                                  text: 'What are your weaknesses?'
+                                }
+                              }
+                            }
+                          },
+                          onUploadComplete: function(data) {
+                            playerDiv.innerHTML = data.embedHtml;
+                            //To check whether this works or not!
+                          },
+                          title: 'Singapore Airlines',
+                          onPreviewAvailable: function(blob) {
+                            playerDiv.innerHTML = '<img src="' + URL.createObjectURL(blob) + '" alt="Preview Image">';
+                          },
+                          localization: {
+                            strings: {
+                              task_upload: 'Submitting',
+                              webcam_rec_finish: 'Finish and Submit'
+                            }
+                          }
+                        });
+
+                        document.getElementById('launch-clipchamp').onclick = function() {
+                          process.open().then(function(remote) {
+                            remote.areRecordingDevicesReady().then(function() {
+                              // This launches the recording as soon as the
+                              // webcam can be accessed.
+                              remote.startRecording();
+                            }).catch(function() {
+                              alert('You webcam is not ready or you failed to grant us access to your webcam!');
+                            });
+                          });
+                        };
+                    </script>
                 </div>
+
                 <br><br>
                 <a href="#" class="blue-orange-button" onclick="return show('video-intro','video-page');">Return</a>
+                <a href="confirmation.html" class="blue-orange-button">Confirm</a>
             </div>
         </div>
     </body>
 </html>
+
