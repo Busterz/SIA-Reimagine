@@ -39,9 +39,14 @@
 
             <div class="prerequisites">
                 <p>Please take note of the following prerequisites when considering the application.</p>
-                <ol>
-                    <li>Must be blah blah</li>
-                </ol>
+                <hr>
+                <p>* Minimum age of 18 years old due to legislative requirements<br>
+                    * Fulfil the minimum height requirement of <b>at least 1.58m</b> for females in order to carry out safety and emergency procedures onboard<br>
+                    * Junior college or University degree holder (those graduating by March 2018 are welcome to apply)<br>
+                    * High level of English proficiency<br>
+                    * Willing to be based in Singapore
+                </p>
+                <br>
             </div>
             </div>
             <form class="main-text" action="?action=save" name="form" method="post">
@@ -50,29 +55,29 @@
                     <fieldset>
                         <legend>Nationality &amp; NRIC Details</legend>
                         Nationality: <br>
-                        <input type="text" name="nationality"><br>
+                        <input type="text" id="nationality"><br>
                         NRIC Number: <br>
-                        <input type="text" name="nric"><br>
+                        <input type="text" id="nric"><br>
                     </fieldset>
                     <br>
 
                     <fieldset>
                         <legend>Address &amp; Contact Number</legend>
                         Residential Address: <br>
-                        <input type="text" name="address"><br>
+                        <input type="text" id="address"><br>
                         Postal Address: (If it's different from your residential address)<br>
-                        <input type="text" name="address2"><br>
+                        <input type="text" id="address2"><br>
                         Mobile Telephone: (eg: SG - 0065********)<br>
-                        <input type="number" name="phone"><br>
+                        <input type="number" id="phone"><br>
                         Email Address: <br>
-                        <input type="email" name="email"><br>
+                        <input type="email" id="email"><br>
                     </fieldset>
                     <br>
 
                     <fieldset>
                         <legend>Height</legend>
                         Height (In centimetres): <br>
-                        <input type="number" name="height"><br>
+                        <input type="number" id="height"><br>
                     </fieldset>
                     <br>
 
@@ -80,12 +85,12 @@
                         <!-- Has to be general, allow the user to add on up to 3 qualifications-->
                         <legend>Educational Qualifications</legend>
                         Highest Educational Qualification: <br>
-                        <input type="text" name="degree"><br>
+                        <input type="text" id="degree"><br>
                         
                         Languages Spoken: (Fill in the order of <b>Fluency</b>)<br>
-                        <input type="text" name="language1"><br><br>
-                        <input type="text" name="language2"><br><br>
-                        <input type="text" name="language3"><br>
+                        <input type="text" id="language1"><br><br>
+                        <input type="text" id="language2"><br><br>
+                        <input type="text" id="language3"><br>
                     </fieldset>
                     <br>
 
@@ -108,8 +113,8 @@
 
                     <fieldset>
                         <legend>Availability</legend>
-                        By when will you be available? (Answer in this format: dd/mm/yy) <br>
-                        <input type="text" name="availability"><br>
+                        By when will you be available? (Choose between Immediately or Others) <br>
+                        <input type="text" id="availability"><br>
                     </fieldset>
                     <br>
 
@@ -273,11 +278,11 @@
                         <h3>Declaration</h3>
                         <hr>
                         <p>By submitting this form, I declare that all the information provided in this application for assessing my suitability for employment istrue to the best of my knowledge and that I have not wilfully withheld any relevant particulars. <br>
-                        This declaration, shall, if I am employed by the Company, be part of my contract of service. <br>
+                        This declaration, shall, if I am employed by the Company, be part of my contract of service. <br><br>
                         I accept that if any of the information given by me in this application for employment is in any way false, or incorrect, the Company shall have the right to reject my application, withdraw any offer of employment or dismiss me without notice and without assigning any reason.</p>
                     </div>
                 </div>
-                <a class="blue-orange-button" href="home.html">Apply</a>
+                <a class="blue-orange-button" href="home.html" onclick="saveValues()">Apply</a>
             </form>          
             
             

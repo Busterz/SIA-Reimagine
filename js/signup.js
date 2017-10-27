@@ -7,7 +7,7 @@ function confirmEnteredPassword(){
     var inputPass = document.getElementById("inputPassword").value;
     var checkPass = document.getElementById("checkPassword").value;
     if(inputPass === checkPass){
-      sendForm();
+        sendForm();
     }
     else{
       alert("The password that you have entered does not match");
@@ -28,3 +28,5 @@ function validateForm()
       alert("Please ensure that all your fields are filled.");
     }
 }
+
+
