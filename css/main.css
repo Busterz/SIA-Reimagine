@@ -13,7 +13,6 @@ a{
 
 .body{
 
-    background: url("../images/login-bg.jpg") no-repeat center center fixed;
     width: auto;
     height: auto;
     background-size: cover;
@@ -34,7 +33,7 @@ a{
     float: left;
     font-size: 50px;
     font-weight: 200;
-    color: #fff;
+    color: #000;
 
 }
 
@@ -48,12 +47,18 @@ a{
 
     position: absolute;
     top: calc(50% - 50px);
-    left: 50%;
+    left: 53%;
     height: auto;
     width: auto;
     padding: 10px;
-    background: transparent;
+    background: #022569;
+    border-radius: 5px;
 
+}
+
+.login label{
+    
+    color: #fff;
 }
 
 #username{
