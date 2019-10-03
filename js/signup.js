@@ -6,12 +6,10 @@ function sendForm()
 function confirmEnteredPassword(){
     var inputPass = document.getElementById("inputPassword").value;
     var checkPass = document.getElementById("checkPassword").value;
-    if(inputPass === checkPass){
+    if(inputPass === checkPass)
         sendForm();
-    }
-    else{
+    else
       alert("The password that you have entered does not match");
-    }
 }
 
 function validateForm()
@@ -21,12 +19,10 @@ function validateForm()
     var email = document.getElementById("inputEmail").value;
     var inputPass = document.getElementById("inputPassword").value;
     var checkPass = document.getElementById("checkPassword").value;
-    if(firstName != "" && lastName != "" && email != "" && inputPass != "" && checkPass != ""){
+    if(firstName != "" && lastName != "" && email != "" && inputPass != "" && checkPass != "")
       confirmEnteredPassword();
-    } 
-    else{
+    else
       alert("Please ensure that all your fields are filled.");
-    }
 }
 
 
